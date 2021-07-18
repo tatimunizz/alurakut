@@ -36,10 +36,10 @@ function ProfileRelationsBox(propriedades) {
             <li key={itemAtual.login}>
               <a href={itemAtual.html_url}>
                 <img src={itemAtual.avatar_url} />
-                <span>{itemAtual.title}</span>
+                <span>{itemAtual.login}</span>
               </a>
             </li>
-          )
+          );
         })}
       </ul>
     </ProfileRelationsBoxWrapper>
