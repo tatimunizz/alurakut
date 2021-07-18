@@ -197,11 +197,13 @@ export async function getServerSideProps(context) {
   const cookies = nookies.get(context);
   const token = cookies.USER_TOKEN;
   const { isAuthenticated } = await fetch(
-    "api/auth", {
-    headers: {
-      Authorization: token,
-    },
-  }).then((resposta) => resposta.json());
+    "https://alurakut-tatimunizz.vercel.app/api/auth",
+    {
+      headers: {
+        Authorization: token,
+      },
+    }
+  ).then((resposta) => resposta.json());
 
   if (!isAuthenticated) {
     return {
